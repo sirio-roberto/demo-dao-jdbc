@@ -28,7 +28,7 @@ public class Program2 {
         System.out.println("=== TEST 3: department insert ===");
         Department dep2 = new Department();
         dep2.setName("Food");
-        departmentDao.insert(dep2);
+        //departmentDao.insert(dep2);
         System.out.println("Departmet Inserted! " + dep2);
 
         System.out.println();
@@ -37,5 +37,10 @@ public class Program2 {
         dep2.setName("Drinks");
         departmentDao.update(dep2);
         System.out.println("Department updated: " + departmentDao.findById(dep2.getId()));
+
+        System.out.println();
+        System.out.println("=== TEST 5: department delete ===");
+        departmentDao.deleteById(7);
+        System.out.println("Department deleted");
     }
 }
